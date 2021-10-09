@@ -9,7 +9,9 @@
 
     <nav>
         <ul>
-            <li><a href="/events">All Events</a></li>
+            <th:block th:each="event : ${events}">
+                <li th:text="${event}"></li>
+            </th:block>
         </ul>
     </nav>
 
