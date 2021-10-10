@@ -21,9 +21,33 @@
         </div>
         <div class="form-group">
             <label>Email
-                <input th:field="${event.contactEmail}" class="form-control" type="text">
+                <input th:field="${event.contactEmail}" class="form-control">
             </label>
             <p class="error" th:errors="${event.contactEmail}"></p>
+        </div>
+        <div class="form-group">
+            <label>Location
+                <input th:field="${event.location}" class="form-control">
+            </label>
+            <p class="error" th:errors="${event.location}"></p>
+        </div>
+        <div class="form-group">
+            <label>Requires Registration
+                <input th:field="${event.requiresRegistration}" type="checkbox" class="form-control">
+            </label>
+            <p class="error" th:errors="${event.requiresRegistration}"></p>
+        </div>
+        <div class="form-group">
+            <label>Number of attendees
+                <input th:field="${event.numberOfAttendees}" class="form-control">
+            </label>
+            <p class="error" th:errors="${event.numberOfAttendees}"></p>
+        </div>
+        <div class="form-group">
+            <label>Times held per week
+                <input th:field="${event.timesPerWeek}" class="form-control">
+            </label>
+            <p class="error" th:errors="${event.timesPerWeek}"></p>
         </div>
         <div class="form-group">
             <input class="btn btn-success" type="submit" value="Create">
