@@ -4,18 +4,21 @@
 <body class="container">
     <header th:replace="fragments :: header"></header>
 
-    <p th:unless="${events} and ${events.size()}">No events!</p>
+    <p th:unless="${tags} and ${tags.size()}">No tags!</p>
 
 
     <table class="table table-striped">
         <thead>
-            <tr>
-                <th>Event Name</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
         </thead>
-        <tr th:each="event : ${events}">
-            <td><a th:href="'/events/detail?eventId=' + ${event.id}" th:text="${event.name}"></a></td>
+        <tr th:each="tag : ${tags}">
+            <td th:text="${tag.id}"></td>
+            <td th:text="${tag.displayName}"></td>
         </tr>
     </table>
+
 </body>
 </html>
